@@ -19,7 +19,7 @@ public class FileUtils {
         FileOutputStream fos = new FileOutputStream(firstFile.getParent()+"/"+"output.txt");
         for (File file: files){
             FileInputStream fis = new FileInputStream(file);
-            byte[] data = new byte[fis.available()];;
+            byte[] data = new byte[fis.available()];
             int size;
             while ((size = fis.read(data))!=-1){
                 fos.write(data,0,size);
